@@ -40,7 +40,7 @@ const cards = [
 
 const Contact: React.FC = () => {
   return (
-    <main className="w-full min-h-screen bg-black text-white flex items-center justify-center px-4">
+    <main className="w-full min-h-screen bg-black text-white flex items-center justify-center px-4 pt-20">
       <div className="max-w-6xl mx-auto">
         <a href="#" className="text-[#1F2EFF] text-xl mb-10 inline-block">Contact us</a>
         <h1 className="text-4xl md:text-5xl font-extrabold mb-8">We'd love to hear from you</h1>

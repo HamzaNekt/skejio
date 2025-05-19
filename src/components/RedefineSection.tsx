@@ -1,7 +1,10 @@
 import React from "react";
 import logo from "../assets/logo.png";
+import { useNavigate } from "react-router-dom";
 
 const RedefineSection: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="w-full bg-black py-20 px-4 text-center">
       <div className="max-w-3xl mx-auto flex flex-col items-center">
@@ -14,6 +17,7 @@ const RedefineSection: React.FC = () => {
         <button
           className="px-8 py-3 text-white font-semibold rounded-lg shadow transition"
           style={{ backgroundColor: '#1F2EFF' }}
+          onClick={() => navigate('/contact')}
         >
           Contact Sales
         </button>
