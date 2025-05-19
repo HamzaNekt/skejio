@@ -35,7 +35,7 @@ const AboutUs: React.FC = () => {
     <main className="w-full min-h-screen bg-black text-white pt-36 pb-20 px-4">
       {/* Header section */}
       <div className="max-w-4xl mx-auto text-center mb-40">
-        <a href="#" className="text-[#1F2EFF] text-xl mb-6 inline-block">About us</a>
+        <a className="text-[#1F2EFF] text-xl mb-6 inline-block">About us</a>
         <h1 className="text-4xl md:text-5xl font-extrabold mb-4">About the company</h1>
         <p className="text-lg text-gray-200 mb-2">Learn more about the company and the team behind it.</p>
       </div>

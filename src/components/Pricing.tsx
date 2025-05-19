@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import business from "../assets/buisness.png";
 import basic from "../assets/basic.png";
 
@@ -15,6 +15,13 @@ const DocumentIcon = (
 
 const Pricing: React.FC = () => {
   const [annual, setAnnual] = useState(true);
+
+  useEffect(() => {
+    // Réinitialiser l'état lors du montage du composant
+    setAnnual(true);
+    // Scroll vers le haut
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <main className="w-full min-h-screen bg-black text-white pt-36 pb-20 px-4">
@@ -40,9 +47,9 @@ const Pricing: React.FC = () => {
         </div>
       </div>
       {/* Cartes de plans */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16 mb-28">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 mb-28">
         {/* Basic */}
-        <div className="bg-[#0A0E2A] rounded-3xl p-10 flex flex-col h-full items-center border-2 border-[#181A2A] shadow-xl w-full min-w-[420px]">
+        <div className="bg-[#0A0E2A] rounded-3xl p-10 flex flex-col h-full items-center border-2 border-[#181A2A] shadow-xl w-full min-w-[380px]">
           <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center mb-8 shadow-md overflow-hidden">
             <img src={basic} alt="Basic plan icon" className="w-12 h-12 object-contain" />
           </div>
@@ -61,7 +68,7 @@ const Pricing: React.FC = () => {
           </div>
         </div>
         {/* Business */}
-        <div className="bg-[#0A0E2A] rounded-3xl p-10 flex flex-col h-full items-center border-2 border-[#181A2A] shadow-xl w-full min-w-[420px]">
+        <div className="bg-[#0A0E2A] rounded-3xl p-10 flex flex-col h-full items-center border-2 border-[#181A2A] shadow-xl w-full min-w-[380px]">
           <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center mb-8 shadow-md overflow-hidden">
             <img src={business} alt="Business plan icon" className="w-12 h-12 object-contain" />
           </div>
@@ -80,7 +87,7 @@ const Pricing: React.FC = () => {
           </div>
         </div>
         {/* Enterprise */}
-        <div className="bg-[#0A0E2A] rounded-3xl p-10 flex flex-col h-full items-center border-2 border-[#181A2A] shadow-xl w-full min-w-[420px]">
+        <div className="bg-[#0A0E2A] rounded-3xl p-10 flex flex-col h-full items-center border-2 border-[#181A2A] shadow-xl w-full min-w-[380px]">
           <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center mb-8 shadow-md overflow-hidden">
             <img src={business} alt="Enterprise plan icon" className="w-12 h-12 object-contain" />
           </div>
